@@ -11,7 +11,7 @@ public static class Extension
 {
     public static void AddDataAccessLayer(this IServiceCollection service, IConfiguration configuration)
     {
-        var connectionString = configuration.GetConnectionString("Postgresql");
+        var connectionString = configuration.GetConnectionString("PostgresSQL");
         service.AddDbContext<ApplicationDbContext>(options =>
         {
             options.UseNpgsql(connectionString);
