@@ -12,6 +12,8 @@ public class User : IAuditible
     
     public string? Password { get; set; }
     
+    public UserSettings UserSettings { get; set; }
+    
     public DateTime CreatedAt { get; set; }
     
     public DateTime UpdatedAt { get; set; }
