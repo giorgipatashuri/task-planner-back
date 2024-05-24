@@ -18,5 +18,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .WithOne(s => s.User)
             .HasForeignKey<UserSettings>(s => s.UserId)
             .HasPrincipalKey<User>(u => u.Id);
+        builder.HasMany(u => u.Tasks)
+            .WithOne(t => t.User)
+            .HasForeignKey(t => t.UserId)
+            .HasPrincipalKey(u => u.Id);
     }
 }

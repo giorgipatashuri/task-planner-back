@@ -14,6 +14,8 @@ public class User : IAuditible
     
     public UserSettings UserSettings { get; set; }
     
+    public List<Task> Tasks { get; set; }
+    
     public DateTime CreatedAt { get; set; }
     
     public DateTime UpdatedAt { get; set; }
