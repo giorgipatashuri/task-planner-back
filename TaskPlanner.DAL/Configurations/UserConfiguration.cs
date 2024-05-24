@@ -22,5 +22,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .WithOne(t => t.User)
             .HasForeignKey(t => t.UserId)
             .HasPrincipalKey(u => u.Id);
+        builder.HasMany(u => u.TimeBlocks)
+            .WithOne(t => t.User)
+            .HasForeignKey(t => t.UserId)
+            .HasPrincipalKey(u => u.Id);
     }
 }

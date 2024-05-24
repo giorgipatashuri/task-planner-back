@@ -16,6 +16,8 @@ public class User : IAuditible
     
     public List<Task> Tasks { get; set; }
     
+    public List<TimeBlock> TimeBlocks { get; set; }
+    
     public DateTime CreatedAt { get; set; }
     
     public DateTime UpdatedAt { get; set; }
