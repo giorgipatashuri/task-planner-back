@@ -18,6 +18,8 @@ public class User : IAuditible
     
     public List<TimeBlock> TimeBlocks { get; set; }
     
+    public List<PomodoroSession> PomodoroSessions { get; set; }
+     
     public DateTime CreatedAt { get; set; }
     
     public DateTime UpdatedAt { get; set; }

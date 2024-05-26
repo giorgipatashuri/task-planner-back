@@ -26,5 +26,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .WithOne(t => t.User)
             .HasForeignKey(t => t.UserId)
             .HasPrincipalKey(u => u.Id);
+        builder.HasMany(u => u.PomodoroSessions)
+            .WithOne(p => p.User)
+            .HasForeignKey(p => p.UserId)
+            .HasPrincipalKey(u => u.Id);
     }
 }
